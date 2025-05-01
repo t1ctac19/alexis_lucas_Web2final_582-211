@@ -1,3 +1,45 @@
+body{
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    justify-content:space-between ;
+    width: 100vw;
+    background-color: var(--couleur-noir);
+    aspect-ratio: 144/12;
+}
+
+ul {
+    display: flex; 
+    justify-content:space-between ;
+    width: 100vw;
+}
+
+li{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    font-family: "BankGothic";
+    color: var(--couleur-blanc);
+    font-size:clamp(1rem,1.3vw,2rem);
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--couleur-blanc);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: "BankGothic";
+    src: url(../assets/polices/bankgothic-md-bt/bankgothic-md-bt/BankGothic\ Bold.ttf) format("truetype");
+}
+
 :root {
     --couleur-rouge: #E20A16;
     --couleur-noir: #000;
