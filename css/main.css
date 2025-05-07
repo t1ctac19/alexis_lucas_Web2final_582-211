@@ -66,6 +66,46 @@ body {
     background-color: var(--couleur-gris);
 }
 
+
+aside{
+    width: 100%;
+    background-color: var(--couleur-noir);
+    aspect-ratio: 144/20;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+aside nav{
+    display: flex;
+    justify-content:space-between;
+    height: 100%;
+}
+
+aside ul{
+    display: flex; 
+    justify-content:space-between;
+    width: 100%; 
+}
+
+aside li{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-family: var(--bank-gothic);
+    font-size: clamp(1rem,2vw,2rem);
+}
+
+aside a{
+    text-decoration: none;
+    color: var(--couleur-blanc);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+
 /* Style Header */
 header {
     width: 100%;
