@@ -20,35 +20,38 @@
 h1 {
     font-family: var(--bank-gothic);
     color: var(--couleur-blanc);
-    font-size: clamp(1rem,1.3vw,2rem);
+    font-size: clamp(1rem,10vw,4rem);
 }
 
 h2 {
     font-family: var(--bank-gothic);
     color: var(--couleur-blanc);
-    font-size: clamp(1rem,1.2vw,2rem);
+    font-size: clamp(1rem,5vw,3rem);
 }
 
 h3 {
     font-family: var(--bank-gothic);
     color: var(--couleur-blanc);
-    font-size: clamp(0.75rem,1.1vw,1.5rem);
+    font-size: clamp(0.75rem,5vw,2.5rem);
 }
 
 p {
     font-family: var(--poppins);
     color: var(--couleur-blanc);
-    font-size: clamp(0.5rem,1vw,1.25rem);
+    font-size: clamp(0.5rem,5vw,2.25rem);
 }
 
 /* Section Main */
 main {
-    background-color: var(--couleur-gris);
+    width: 90%;
+    margin: 0 auto;
 }
+
 
 /* Style Body */
 body {
     margin: 0;
+    background-color: var(--couleur-gris);
 }
 
 /* Style Header */
@@ -173,4 +176,8 @@ footer a {
 .lignes {
     height: 100%;
     display: none;
+}
+
+img {
+    width: 100%;
 }
