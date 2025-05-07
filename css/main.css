@@ -41,6 +41,18 @@ p {
     font-size: clamp(0.5rem,5vw,2.25rem);
 }
 
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--couleur-blanc);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
 /* Section Main */
 main {
     width: 90%;
@@ -83,14 +95,6 @@ header li {
     width: 20%;
     font-family: var(--bank-gothic);
     font-size: clamp(1rem,2vw,2rem);
-}
-
-header a {
-    text-decoration: none;
-    color: var(--couleur-blanc);
-    display: flex; 
-    justify-content: center;
-    align-items: center;
 }
 
 .logo-square {
@@ -152,14 +156,6 @@ footer ul {
 .reseaux-sociaux img {
     width: 50%;
     height: 50%;
-}
-
-footer a {
-    text-decoration: none;
-    color: var(--couleur-blanc);
-    display: flex; 
-    justify-content: center;
-    align-items: center;
 }
 
 .images-footer {
