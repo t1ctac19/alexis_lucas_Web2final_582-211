@@ -260,6 +260,7 @@ img {
         font-family: var(--bank-gothic);
         font-size: clamp(1rem,1.5vw,1.75rem);
         margin: 15px 0;
+        width: 30%;
     }
     
     .reseaux-sociaux li {
@@ -281,16 +282,8 @@ img {
         align-items: center;
     }
     
-    .images-footer img {
-        width: 100%;
-    }
-    
     .lignes {
         height: 100%;
-        display: block;
-    }
-    
-    img {
-        width: 100%;
+        display: inline-block;
     }
 }

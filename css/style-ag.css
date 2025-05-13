@@ -68,31 +68,24 @@ input[type="search"] {
 
 .logo.switch {
     background-image: url("../assets/images/logo_switch.png");
-    background-position: center;
 }
 .logo.ps5 {
     background-image: url("../assets/images/logo_ps5.png");
-    background-position: center;
 }
 .logo.xbox-series {
     background-image: url("../assets/images/logo_xbox_series.png");
-    background-position: center;
 }
 .logo.windows {
     background-image: url("../assets/images/logo_windows.png");
-    background-position: center;
 }
 .logo.ds {
     background-image: url("../assets/images/logo_ds.png");
-    background-position: center;
 }
 .logo.ps4 {
     background-image: url("../assets/images/logo_ps4.png");
-    background-position: center;
 }
 .logo.xbox-one {
     background-image: url("../assets/images/logo_xbox_one.png");
-    background-position: center;
 }
 .logo.android {
     background-image: url("../assets/images/logo_android.png");
@@ -143,8 +136,41 @@ input[type="search"] {
     line-height: normal;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: contain;
 }
 
-@media screen and (min-width: 600px) {
-    
+
+
+@media screen and (min-width: 800px) {
+    main.assistant {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .recherche-console, .recherche-serie, .recherche-jeux {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        width: 100%;
+    }
+
+    .assistant {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .assistant li {
+        width: 40%;
+        margin: 10px;
+    }
 }
