@@ -1,17 +1,253 @@
+.rechercher {
+    display: flex;
+    margin-bottom: 8px;
+}
+
 .rechercher-texte {
     width: 100%;
     display: flex;
     margin: 0 auto;
     background-color: grey;
+    font-size: small;
+    border: 4px, solid, black;
 }
 
-.image-vampire{
+.image-vampire {
     width: 100%;
 }
 
-@media screen and (min-width: 600px) {
-    .hamburger-menu{display: none;}
+::placeholder {
+    color: black;
+    opacity: 1;
+    padding: 2%;
 
 }
 
+.menu-icon {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+/* Cacher la checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Bouton burger */
+.menu-icon {
+    width: 30px;
+    height: 25px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Menu latéral */
+aside {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    color: white;
+    padding: 60px 20px;
+    transition: left 0.3s ease;
+    z-index: 2;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.logo-square {
+    max-width: 150px;
+}
+
+
+/* Animation du menu burger */
+#menu-toggle:checked+label .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(14px);
+}
+
+#menu-toggle:checked+label .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked+label .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-14px);
+}
+
+/* Affichage du menu */
+#menu-toggle:checked~aside {
+    left: 0;
+}
+
+.haut-page {
+    display: none;
+}
+
+
+.header-burger ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.jeu-defilement {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.jeu-defilement img {
+    border: 4px solid black;
+    width: 25%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.vente_ete {
+    border: 4px, black, solid;
+    object-fit: contain;
+}
+
+.image-banniere {
+    border: 4px, solid, black;
+    margin-bottom: 8px;
+}
+
+.espace {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-banniere {
+    font-family: var(--poppins);
+    color: var(--couleur-blanc);
+    font-size: clamp(0.5rem, 5vw, 1.25rem);
+    text-align: center;
+}
+
+
+
+.checkbox-connexion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.prompt {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    background-color: grey;
+    font-size: small;
+    border: 4px, solid, black;
+}
+
+
+@media screen and (min-width: 600px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .rechercher-texte {
+        border: 9px, solid, black;
+        font-size: larger;
+    }
+
+    .image-banniere {
+        border: 9px, solid, black;
+    }
+
+    .espace {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .menu-burger {
+        display: none;
+    }
+
+    .haut-page {
+        display: flex;
+    }
+
+    .jeu-defilement {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .jeu-defilement img {
+        border: 9px, black, solid;
+        object-fit: contain;
+    }
+
+    .vente_ete {
+        border: 9px, black, solid;
+        object-fit: contain;
+    }
+
+    .checkbox-connexion {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .prompt-texte {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 auto;
+        background-color: var(--couleur-blanc);
+        font-size: small;
+        border: 4px, solid, black;
+    }
+
+    .prompt {
+        display: flex;
+        margin-bottom: 8px;
+    }
+
+    .qr-code {
+        width: 30%;
+        background-color: var(--couleur-blanc);
+    }
+}

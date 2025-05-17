@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="haut-page">
             <ul>
                 <li class="jeux">
                     <a href="powerwash.html">Jeux</a>
@@ -36,45 +37,75 @@
         </nav>
     </header>
 
-<main>
+    <main>
+        <div class="espace">
+            <div class="menu-burger">
+                <input type="checkbox" id="menu-toggle" />
 
-    <div class="rechercher">
-        <input type="text" placeholder="rechercher" class="rechercher-texte">
-    </div>
 
-    <div class="image_banniere">
-        <img src="assets/images/vampire_suvivors.png" alt=" image du jeu vampire survivors" class="image-vampire">
-    </div>
+                <label for="menu-toggle" class="menu-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
 
-    <label class="hamburger-menu">
-        <input type="checkbox">
-    </label>
-    <aside>
-        <nav>
-            <ul>
-                <li class="jeux">
-                    <a href="powerwash.html">Jeux</a>
-                </li>
 
-                <li class="assistance">
-                    <a href="assistance.html">Assistance</a>
-                </li>
+                <aside>
+                    <nav class="header-burger">
+                        <ul>
+                            <li class="jeux">
+                                <a href="powerwash.html">Jeux</a>
+                            </li>
 
-                <li class="square-enix">
-                    <a href="index.html"><img src="assets/images/logo_square_enix.png" class="logo-square"></a>
-                </li>
+                            <li class="assistance">
+                                <a href="assistance.html">Assistance</a>
+                            </li>
 
-                <li class="actualite">
-                    <a href="#">Actualité</a>
-                </li>
+                            <li class="square-enix">
+                                <a href="index.html"><img src="assets/images/logo_square_enix.png"
+                                        class="logo-square"></a>
+                            </li>
 
-                <li class="connexion">
-                    <a href="connexion.html">Connexion</a>
-                </li>
-            </ul>
-        </nav>
-    </aside>
-</main>
+                            <li class="actualite">
+                                <a href="#">Actualité</a>
+                            </li>
+
+                            <li class="connexion">
+                                <a href="connexion.html">Connexion</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+
+            <div class="rechercher">
+                <input type="text" placeholder="RECHERCHER" class="rechercher-texte">
+            </div>
+
+            <div class="image-banniere">
+                <img src="assets/images/vampire_suvivors.png" alt="image du jeu vampire survivors"
+                    class="image-vampire">
+                <p class="text-banniere"> SaGA Emerald Beyond rejoint le monde de Vampires Survivors</p>
+
+                <p class="text-banniere">Une nouvelle étape, des personnages jouables, des armes et
+                    plus encore sont désormais disponibles dans Vampire Survivors,
+                    inspiré par le RPG.
+                </p>
+            </div>
+
+            <div class="jeu-defilement">
+                <img src="assets/images/logo_final_fantasy.png" alt="">
+                <img src="assets/images/logo_powerwash.png" alt="">
+                <img src="assets/images/logo_dragon_quest.png" alt="">
+                <img src="assets/images/logo_life_is_strange.png" alt="">
+            </div>
+
+            <div class="vente_ete">
+                <img src="assets/images/vente_ete.png" alt="">
+            </div>
+
+        </div>
+    </main>
 
     <footer>
         <nav>
@@ -82,45 +113,45 @@
                 <li class="a-propos">
                     <a href="#">À propos</a>
                 </li>
-                
+
                 <li class="conditions">
                     <a href="#">Conditions</a>
                 </li>
-                    
+
                 <li class="members">
                     <a href="#">MEMBERS</a>
                 </li>
-                    
+
                 <li class="Nous joindre">
                     <a href="#">Nous joindre</a>
                 </li>
-                    
+
                 <li class="declarations">
                     <a href="#">Déclarations</a>
                 </li>
-                    
+
                 <li class="carrieres">
                     <a href="#">Carrières</a>
                 </li>
             </ul>
-            
+
             <ul class="reseaux-sociaux">
                 <li class="instagram">
                     <a href="#"><img src="./assets/images/instagram.png"></a>
                 </li>
-                
+
                 <li class="twitter">
                     <a href="#"><img src="./assets/images/x.png"></a>
                 </li>
-                    
+
                 <li class="twitch">
                     <a href="#"><img src="./assets/images/twitch.png"></a>
                 </li>
-                    
+
                 <li class="facebook">
                     <a href="#"><img src="./assets/images/facebook.png"></a>
                 </li>
-                    
+
                 <li class="youtube">
                     <a href="#"><img src="./assets/images/youtube.png"></a>
                 </li>
@@ -131,8 +162,7 @@
             <img src="./assets/images/lignes.png" class="lignes">
             <a href="#"><img src="./assets/images/logo_square_enix.png"></a>
         </div>
-    </footer>    
+    </footer>
 </body>
 
 </html>
-
