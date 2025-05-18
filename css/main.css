@@ -113,34 +113,36 @@ aside {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
 
 /* Styles Généraux */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--bank-gothic);
     color: var(--couleur-blanc);
     text-align: center;
 }
 
 h1 {
-    font-size: clamp(1rem,7.5vw,4rem);
+    font-size: clamp(1rem, 7.5vw, 4rem);
 }
 
 h2 {
-    font-size: clamp(1rem,5vw,3rem);
+    font-size: clamp(1rem, 5vw, 3rem);
 }
 
 h3 {
-    font-size: clamp(0.75rem,5vw,2.5rem);
+    font-size: clamp(0.75rem, 5vw, 2.5rem);
 }
 
 p {
     font-family: var(--poppins);
     color: var(--couleur-blanc);
-    font-size: clamp(0.5rem,5vw,2.25rem);
+    font-size: clamp(0.5rem, 5vw, 2.25rem);
     text-align: center;
 }
 
 li {
     list-style-type: none;
-    font-size: clamp(1rem,2.5vw,2.5rem);
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
     text-align: center;
 }
 
@@ -155,7 +157,7 @@ a {
 input[type="search"] {
     background-color: var(--couleur-gris);
     width: 100%;
-    font-size: clamp(1.25rem,5vw,1.75rem);
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
     color: var(--couleur-blanc);
 }
 
@@ -214,7 +216,7 @@ header li {
     align-items: center;
     width: 20%;
     font-family: var(--bank-gothic);
-    font-size: clamp(1rem,2vw,2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 
 .logo-square {
@@ -250,7 +252,7 @@ aside li {
     align-items: center;
     width: 20%;
     font-family: var(--bank-gothic);
-    font-size: clamp(1rem,2vw,2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 
 aside a {
@@ -300,7 +302,7 @@ footer ul {
     justify-content: center;
     align-items: center;
     font-family: var(--bank-gothic);
-    font-size: clamp(1rem,1.5vw,1.75rem);
+    font-size: clamp(1rem, 1.5vw, 1.75rem);
     margin: 15px 0;
 }
 
@@ -326,6 +328,14 @@ footer ul {
 
 .images-footer img {
     width: 100%;
+}
+
+li:hover {
+    font-size: clamp(0.5rem, 5vw, 2.25rem);
+}
+
+.logo-square:hover {
+background-color: var(--couleur-blanc);
 }
 
 @media screen and (min-width: 800px) {
@@ -380,7 +390,7 @@ footer ul {
         align-self: flex-end;
     }
 
-        .menu-burger {
+    .menu-burger {
         display: none;
     }
 
