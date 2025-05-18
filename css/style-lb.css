@@ -45,97 +45,7 @@
     font-family: var(--bank-gothic);
 }
 
-.menu-icon {
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
-/* Cacher la checkbox */
-#menu-toggle {
-    display: none;
-}
-
-/* Bouton burger */
-.menu-icon {
-    width: 30px;
-    height: 25px;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-}
-
-.menu-icon span {
-    height: 4px;
-    background: #fff;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-
-/* Menu latéral */
-aside {
-    position: fixed;
-    left: -100%;
-    top: 0;
-    width: 250px;
-    height: 100vh;
-    background: #222;
-    color: white;
-    padding: 60px 20px;
-    transition: left 0.3s ease;
-    z-index: 2;
-    overflow-x: hidden;
-    box-sizing: border-box;
-}
-
-/* Animation du menu burger */
-#menu-toggle:checked+label .bar:nth-child(1) {
-    transform: rotate(45deg) translateY(14px);
-}
-
-#menu-toggle:checked+label .bar:nth-child(2) {
-    opacity: 0;
-}
-
-#menu-toggle:checked+label .bar:nth-child(3) {
-    transform: rotate(-45deg) translateY(-14px);
-}
-
-/* Affichage du menu */
-#menu-toggle:checked~aside {
-    left: 0;
-}
-
-.haut-page {
-    display: none;
-}
-
-.logo-square {
-    width: 120px;
-}
-
-.header-burger ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.header-burger li {
-    font-size: clamp(1rem, 2.5vw, 2.5rem);
-}
 
 .jeu-defilement {
     display: flex;
@@ -260,14 +170,6 @@ button {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    .menu-burger {
-        display: none;
-    }
-
-    .haut-page {
-        display: flex;
     }
 
     .jeu-defilement {
