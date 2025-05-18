@@ -1,3 +1,25 @@
+:root {
+    --couleur-rouge: #E20A16;
+    --couleur-noir: #000;
+    --couleur-blanc: #fff;
+    --couleur-gris: #4D4D4D;
+    --couleur-gris-pale: #C8C8C8;
+
+    --poppins: "Poppins";
+    --bank-gothic: "BankGothic";
+}
+
+@font-face {
+    font-family: "BankGothic";
+    src: url(../assets/polices/bankgothic-md-bt/bankgothic-md-bt/BankGothic\ Bold.ttf) format("truetype");
+    src: url(../assets/polices/bankgothic-md-bt/BankGothicLightRegular.otf) format("truetype")
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+
+
+
 .rechercher {
     display: flex;
     margin-bottom: 8px;
@@ -20,7 +42,7 @@
     color: black;
     opacity: 1;
     padding: 2%;
-
+    font-family: var(--bank-gothic);
 }
 
 .menu-icon {
@@ -78,25 +100,6 @@ aside {
     box-sizing: border-box;
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav li {
-    margin: 15px 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.logo-square {
-    max-width: 150px;
-}
-
-
 /* Animation du menu burger */
 #menu-toggle:checked+label .bar:nth-child(1) {
     transform: rotate(45deg) translateY(14px);
@@ -119,12 +122,19 @@ nav a {
     display: none;
 }
 
+.logo-square {
+    width: 120px;
+}
 
 .header-burger ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+}
+
+.header-burger li {
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
 }
 
 .jeu-defilement {
@@ -172,6 +182,10 @@ nav a {
     gap: 8px;
 }
 
+.prompt-texte{
+    width: 100%;
+}
+
 .prompt {
     width: 100%;
     display: flex;
@@ -179,10 +193,56 @@ nav a {
     background-color: grey;
     font-size: small;
     border: 4px, solid, black;
+    display: flex;
+    margin-bottom: 8px;
+    height: 40px;
 }
 
+.qr-code {
+    display: none;
+}
 
-@media screen and (min-width: 600px) {
+.texte-petit {
+    display: none;
+}
+
+main.connexion {
+    display: block;
+}
+
+.section {
+    width: 70%;
+}
+
+.section p {
+    text-align: left;
+    margin: 10px 0;
+    font-family: var(--bank-gothic);
+    color: var(--couleur-blanc);
+}
+
+button {
+    background-color: var(--couleur-noir);
+    font-family: var(--bank-gothic);
+    color: var(--couleur-blanc);
+    font-size: clamp(0.5rem, 5vw, 1.25rem);
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.titre {
+    height: 40px;
+    margin-bottom: 10px ;
+}
+
+.checkbox-connexion p {
+    font-size: clamp(0.5rem, 5vw, 1rem);
+}
+
+@media screen and (min-width: 800px) {
     .menu-icon {
         display: none;
     }
@@ -244,10 +304,56 @@ nav a {
     .prompt {
         display: flex;
         margin-bottom: 8px;
+        height: 60px;
     }
 
     .qr-code {
-        width: 30%;
+        display:block;
+        width: 100%;
         background-color: var(--couleur-blanc);
+    }
+
+
+
+    main.connexion {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section {
+        width: 48%;
+    }
+
+    .section p {
+        text-align: left;
+        margin: 10px 0;
+        font-family: var(--bank-gothic);
+        color: var(--couleur-blanc);
+    }
+
+    button {
+        background-color: var(--couleur-noir);
+        font-family: var(--bank-gothic);
+        color: var(--couleur-blanc);
+        font-size: clamp(0.5rem, 5vw, 1.75rem);
+        text-align: center;
+        padding: 30px;
+        width: 100%;
+        font-weight: lighter;
+    }
+
+    .titre {
+        height: 80px;
+        margin-bottom: 10px ;
+    }
+
+    .checkbox-connexion p {
+        font-size: clamp(0.5rem, 5vw, 1.25rem);
+    }
+
+    .texte-petit {
+        font-size: clamp(0.5rem, 5vw, 1.25rem);
+        text-align: center !important;
+        display: block;
     }
 }

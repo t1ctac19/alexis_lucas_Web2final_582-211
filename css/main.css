@@ -13,7 +13,9 @@
 @font-face {
     font-family: "BankGothic";
     src: url(../assets/polices/bankgothic-md-bt/bankgothic-md-bt/BankGothic\ Bold.ttf) format("truetype");
+    src: url(../assets/polices/bankgothic-md-bt/BankGothicLightRegular.otf) format("truetype")
 }
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
 

@@ -12,7 +12,7 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="haut-page">
             <ul>
                 <li class="jeux">
                     <a href="powerwash.html">Jeux</a>
@@ -36,56 +36,100 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <p class="titre">CONNEXION</p>
-        <p>identifiant</p>
-        <div class="prompt">
-            <input type="text" placeholder="RECHERCHER" class="prompt-texte">
+                <div class="menu-burger">
+                <input type="checkbox" id="menu-toggle" />
+
+
+                <label for="menu-toggle" class="menu-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+
+
+                <aside>
+                    <nav class="header-burger">
+                        <ul>
+                            <li class="jeux">
+                                <a href="powerwash.html">Jeux</a>
+                            </li>
+
+                            <li class="assistance">
+                                <a href="assistance.html">Assistance</a>
+                            </li>
+
+                            <li class="square-enix">
+                                <a href="index.html"><img src="assets/images/logo_square_enix.png"
+                                        class="logo-square"></a>
+                            </li>
+
+                            <li class="actualite">
+                                <a href="#">Actualité</a>
+                            </li>
+
+                            <li class="connexion">
+                                <a href="connexion.html">Connexion</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+
+    <main class="connexion">
+        <div class="section gauche">
+            <p class="titre">CONNEXION</p>
+            <p>identifiant</p>
+            <div class="prompt">
+                <input type="text" placeholder="identifiant" class="prompt-texte">
+            </div>
+            <p>mot de passe</p>
+            <div class="prompt">
+                <input type="text" placeholder="mot de passe" class="prompt-texte">
+            </div>
+            <div class="checkbox-connexion">
+                <input type="checkbox">
+                <p>Se souvenir de moi</p>
+            </div>
+            <button>CONNEXION</button>
+            <p class="texte-petit">OU</p>
+            <p class="texte-petit">scanner le code à partir de l’application SQUARE ENIX pour vous connecter</p>
+
+            <img class="qr-code" src="assets/images/qr_code.png" alt="">
         </div>
-        <p>mot de passe</p>
-        <div class="prompt">
-            <input type="text" placeholder="RECHERCHER" class="prompt-texte">
-        </div>
-        <div class="checkbox-connexion">
-            <input type="checkbox">
-            <p>Se souvenir de moi</p>
-        </div>
-        <p>CONNEXION</p>
-        <p>OU</p>
-        <p>scanner le code à partir de l’application SQUARE ENIX pour vous connecter</p>
-        <p class="titre">CRÉER VOTRE COMPTE</p>
-        <p>e-mail</p>
-        <div class="prompt">
-            <input type="text" placeholder="RECHERCHER" class="prompt-texte">
-        </div>
-        <p>mot de passe</p>
-        <div class="prompt">
-            <input type="text" placeholder="RECHERCHER" class="prompt-texte">
-        </div>
-        <p>répéter le mot de passe</p>
-        <div class="prompt">
-            <input type="text" placeholder="RECHERCHER" class="prompt-texte">
-        </div>
-        <p>date de naissance</p>
-        <div class="prompt">
-            <input type="text" placeholder="RECHERCHER" class="prompt-texte">
-        </div>
-        <p>nom d'utilisateur</p>
-        <div class="prompt">
-            <input type="text" placeholder="RECHERCHER" class="prompt-texte">
-        </div>
-        <div class="checkbox-connexion">
-            <input type="checkbox">
-            <p>Abonnez-vous dès maintenant pour recevoir nos actualités par e-mail</p>
+        <div class="section droite">
+            <p class="titre">CRÉER VOTRE COMPTE</p>
+            <p>e-mail</p>
+            <div class="prompt">
+                <input type="text" placeholder="e-mail" class="prompt-texte">
+            </div>
+            <p>mot de passe</p>
+            <div class="prompt">
+                <input type="text" placeholder="mot de passe" class="prompt-texte">
+            </div>
+            <p>répéter le mot de passe</p>
+            <div class="prompt">
+                <input type="text" placeholder="répéter le mot de passe" class="prompt-texte">
+            </div>
+            <p>date de naissance</p>
+            <div class="prompt">
+                <input type="text" placeholder="AA-MM-JJ" class="prompt-texte">
+            </div>
+            <p>nom d'utilisateur</p>
+            <div class="prompt">
+                <input type="text" placeholder="nom d'utilisateur" class="prompt-texte">
+            </div>
+            <div class="checkbox-connexion">
+                <input type="checkbox">
+                <p>Abonnez-vous dès maintenant pour recevoir nos actualités par e-mail</p>
+            </div>
+
+            <div class="checkbox-connexion">
+                <input type="checkbox">
+                <p>Veuillez cocher la case afin d’accepter les termes et conditions de service de nos sites.</p>
+            </div>
+            <button>inscription</button>
         </div>
 
-        <div class="checkbox-connexion">
-            <input type="checkbox">
-            <p>Veuillez cocher la case afin d’accepter les termes et conditions de service de nos sites.</p>
-        </div>
-        <p>inscription </p>
-
-        <img class="qr-code" src="assets/images/qr_code.png" alt="">
 
     </main>
 
