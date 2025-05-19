@@ -224,6 +224,10 @@ header li {
     width: 100%;
 }
 
+header li:hover {
+    font-size: clamp(0.5rem, 5vw, 2.25rem);
+}
+
 /* Style Aside */
 aside {
     width: 100%;
@@ -328,10 +332,6 @@ footer ul {
 
 .images-footer img {
     width: 100%;
-}
-
-li:hover {
-    font-size: clamp(0.5rem, 5vw, 2.25rem);
 }
 
 .logo-square:hover {

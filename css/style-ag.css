@@ -1,14 +1,20 @@
+/*------------------------------------------------------------------------------
+Variables et Importations des fontes
+------------------------------------------------------------------------------*/
 :root {
+    /* Variables Couleurs */
     --couleur-rouge: #E20A16;
     --couleur-noir: #000;
     --couleur-blanc: #fff;
     --couleur-gris: #4D4D4D;
     --couleur-gris-pale: #C8C8C8;
     
+    /*Variables Fontes */
     --poppins: "Poppins";
     --bank-gothic: "BankGothic";
 }
 
+/* Importation des fontes Bankgothic (via font-face pour rendre la fonte disponible à tous les utilisateurs) et Poppins (via google fonts) */
 @font-face {
     font-family: "BankGothic";
     src: url(../assets/polices/bankgothic-md-bt/bankgothic-md-bt/BankGothic\ Bold.ttf) format("truetype");
@@ -16,24 +22,36 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
 
-main.assistant, .recherche-jeux, .recherche-console, .recherche-serie {
+/*------------------------------------------------------------------------------
+Section Contenu de la page Assistance
+------------------------------------------------------------------------------*/
+
+/* Sélection de toutes les balises ayant la même configuration du flexbox */
+.page_assistance, .recherche-jeux, .recherche-console, .recherche-serie {
+    /* Application du flexbox dans les balises sélectionnées. En mobile, ils affichent tous en colonnes. */
     display: flex;
     flex-direction: column;
     align-items: center;
     align-self: stretch;
 }
 
-main.assistant {
+/* Sélectionne le main de la page assistance */
+.page_assistance {
+    /* Application d'un gap pour espacer les divisions principales de la page et d'un width pour donner une marge sur les côtés de la page. */
     gap: 8vh;
+    width: 80%;
 }
 
+/* Sélection des ul de la page assistance */
 .assistant {
-    display: flex;
+    /* Modif */
     flex-wrap: wrap;
     width: 80%;
 }
 
+/* Sélection des li de la page assistance */
 .assistant li {
+    /* Modification des propriétés de base des li (largeur, bordure, marges, etc.)*/
     width: 100%;
     margin: 10px 0;
     border-style: solid;
@@ -42,11 +60,13 @@ main.assistant {
 }
 
 .assistant a {
+    /* Modification de la taille des ancrages dans les ul .assistant */
     width: 100%;
     aspect-ratio: 235 / 100;
 }
 
 .logo {
+    /* Modification du texte et du background des éléments .logo */
     color: var(--couleur-blanc);
     text-align: center;
     -webkit-text-stroke: 1px var(--couleur-noir);
@@ -58,6 +78,7 @@ main.assistant {
     background-size: cover;
 }
 
+/* Modification de l'image de fond de chaque élément .logo */
 .logo.switch { background-image: url("../assets/images/logo_switch.png"); }
 .logo.ps5 { background-image: url("../assets/images/logo_ps5.png"); }
 .logo.xbox-series { background-image: url("../assets/images/logo_xbox_series.png"); }
@@ -68,9 +89,11 @@ main.assistant {
 .logo.android { background-image: url("../assets/images/logo_android.png"); }
 
 .console .logo {
+    /* Change la taille du background pour qu'il remplisse toute l'espace */
     background-size: contain;
 }
 
+/* Modification de l'image de fond de chaque élément .logo */
 .logo.fantasy { background-image: url("../assets/images/frame_final_fantasy.png"); }
 .logo.dragon { background-image: url("../assets/images/frame_dragon_quest.png"); }
 .logo.raider { background-image: url("../assets/images/frame_tomb_raider.png"); }
@@ -80,18 +103,26 @@ main.assistant {
 .logo.romancing { background-image: url("../assets/images/frame_romancing_saga.png"); }
 .logo.bravely { background-image: url("../assets/images/frame_braverly_default.png"); }
 
+/*------------------------------------------------------------------------------------------------------------------------------------------------
+Section PowerWash Simulator
+------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 h1, .description {
+    /* Créer la boîte grise autour du h1 et de la balise .description */
     padding: 5px;
     background-color: var(--couleur-gris);
     border: solid var(--couleur-noir);
 }
 
 .image-powerwash img {
+    /* Créé une bordure autour de l'image (appliqué à l'image et non la div parce que sinon il y avait un espace vide entre la bordure et l'image) */
     border-style: solid;
     border-width: 4%;
 }
 
 .boutons {
+    /* Modification des marges et de la largeur
+    Application du flexbox */
     width: 75%;
     margin: 0 auto;
     display: flex;
@@ -101,6 +132,7 @@ h1, .description {
 }
 
 .boutons li {
+    /* Modification des propriétés de bases (marges, largeur, bordures, etc.) des li de l'ul .boutons */
     background-color: var(--couleur-gris);
     border-style: solid;
     border-width: 4%;
@@ -109,34 +141,64 @@ h1, .description {
     padding: 4%;
 }
 
+.objet_anime {
+    /* Changement de la taille de l'image
+    Application de l'animation*/
+    animation: eau 10s;
+    animation-fill-mode: forwards; 
+    width: 10%;
+    height: 10%;
+}
+
+
+/* Animation de 5 images-clés faisant que l'image fait un mouvement en z et devient à la toute fin disparait */
+@keyframes eau {
+    0% { transform: translate(0vw); }
+    25% { transform: translate(75vw);}
+    50% { transform: translate(0vw, 50vh);}
+    75% { transform: translate(75vw, 50vh); opacity: 100%; }
+    100% { transform: translate(75vw, 50vh); opacity: 0; }
+}
+
+/*----------------------------------------------------------------------------------------------
+Section Format Desktop
+(ce qui est au-dessus est pour la partie mobile)
+------------------------------------------------------------------------------------------------*/
 @media screen and (min-width: 800px) {
-    main.assistant {
+    .page_assistance {
+        /* Modification des propriétés du main lorsqu'au format desktop */
         gap: 1vh;
         width: 90%;
+        flex-wrap: wrap;
     }
 
     .recherche-jeux, .recherche-console, .recherche-serie {
+        /* S'assure qu'ils prennent toute la largeur possible */
         width: 100%;
     }
 
     .assistant {
+        /* Modification des propriété des ul de la page assistance lorsqu'au format desktop */
         flex-direction: row;
         width: 100%;
         background-size: cover;
     }
 
     .assistant li {
+        /* Modification des propriétés des li des .assistant lorsqu'au format desktop */
         width: 40%;
         margin: 10px;
         max-width: 315px;
     }
 
     .boutons {
+        /* Modification de la largeur et de la direction du flexbox du ul .boutons */
         width: 90%;
         flex-direction: row;
     }
 
     .boutons li {
+        /* Modification des propriétés de base (marges et largeurs) des li dans .boutons */
         border-width: 2%;
         margin: 10px;
         width: 45%;
