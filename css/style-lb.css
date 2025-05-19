@@ -18,10 +18,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
 
-
+/*le placeholder (bar de recherche) se décolle de l'image du bas, change le fond de couleur, la couleur de l'écriture, se rapetisse,
+ se place au milieu, le texte se décalle vers la droite un peu, le font change et une bordure noir est ajouter */
 
 .rechercher {
-    display: flex;
     margin-bottom: 8px;
 }
 
@@ -34,10 +34,6 @@
     border: 4px, solid, black;
 }
 
-.image-vampire {
-    width: 100%;
-}
-
 ::placeholder {
     color: black;
     opacity: 1;
@@ -45,14 +41,21 @@
     font-family: var(--bank-gothic);
 }
 
+/*l'image du haut del'index prend 100% de l'espace */
+.image-vampire {
+    width: 100%;
+}
 
-
+/*place les 4 image en dessous, de l'image de vampire, en flex pour les distancé, ajoute une bordure,
+ fusionne la bordure avec la grosseur totale du conteneur et distance le conteneur de la vente d'été*/
 .jeu-defilement {
     display: flex;
     justify-content: space-around;
     width: 100%;
     margin-bottom: 8px;
 }
+
+/*place les 4 image dans un conteneur et met chacune des images une grosseur de 25% puis rajoute un bordure*/
 
 .jeu-defilement img {
     border: 4px solid black;
@@ -61,21 +64,20 @@
     box-sizing: border-box;
 }
 
+/*change les dimension de l'image et ajoute une bordure*/
 .vente_ete {
     border: 4px, black, solid;
     object-fit: contain;
 }
+
+/*décalle l'image baniere de jeu defilement et ajoute une bordure*/
 
 .image-banniere {
     border: 4px, solid, black;
     margin-bottom: 8px;
 }
 
-.espace {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+/*modifie le texte dans la bannière*/
 
 .text-banniere {
     font-family: var(--poppins);
@@ -84,13 +86,16 @@
     text-align: center;
 }
 
-
+/*modifie toute les checkbox de la page connexion pour les mettres au centre de leur conteneur*/
 
 .checkbox-connexion {
     display: flex;
     align-items: center;
     gap: 8px;
 }
+
+/*modifie les conteneur de texte en changeant la couleur de fond, la grosseur de l'écriture, en mettant une bordure
+en mettant une hauteur et en les espassants */
 
 .prompt-texte{
     width: 100%;
@@ -103,26 +108,35 @@
     background-color: grey;
     font-size: small;
     border: 4px, solid, black;
-    display: flex;
     margin-bottom: 8px;
     height: 40px;
 }
+
+/*met le qr code non visible en version mobile parce qu'il serait inutile*/
 
 .qr-code {
     display: none;
 }
 
+/*met le texte relié au qr code non visible en version mobile parce qu'il serait inutile*/
+
 .texte-petit {
     display: none;
 }
+
+/*change l'aspect du main de la page de connexion pour qu'elle soit sur une seule ligne*/
 
 main.connexion {
     display: block;
 }
 
+/*met la grosseur de la page a 70% puisque section regroupe tout ce qu'il y a dans le main*/
+
 .section {
     width: 70%;
 }
+
+/*modifie la distance, la font. la couleur et l'emplacement de l'écriture dans les p de section*/
 
 .section p {
     text-align: left;
@@ -130,6 +144,9 @@ main.connexion {
     font-family: var(--bank-gothic);
     color: var(--couleur-blanc);
 }
+
+/*modifie la couleur de fond, de texte, le font, la grosseur du font, la grosseur du texte, l'alignement du texte,
+ la grosseur de la bordure, la largeur du boutton et le décalle de se qui se trouve en dessous*/
 
 button {
     background-color: var(--couleur-noir);
@@ -143,28 +160,40 @@ button {
     margin-bottom: 20px;
 }
 
+/*modifie les titres de la page de conexion et les décalles de se qui se trouve en dessous*/
+
 .titre {
     height: 40px;
     margin-bottom: 10px ;
 }
+
+/*modifie la grosseur du texte des checkbox dans la page de connexion*/
 
 .checkbox-connexion p {
     font-size: clamp(0.5rem, 5vw, 1rem);
 }
 
 @media screen and (min-width: 800px) {
+
+/*cache le menu burger en version desktop*/
     .menu-icon {
         display: none;
     }
+
+    /*change la bordure de la bar de recherche et la grosseur du font de celle ci*/
 
     .rechercher-texte {
         border: 9px, solid, black;
         font-size: larger;
     }
 
+    /*modifie la grosseur de la bordure de l'image banniere*/
+
     .image-banniere {
         border: 9px, solid, black;
     }
+
+    /*ajoute un espace entre tout les images de la page index*/
 
     .espace {
         display: flex;
@@ -172,26 +201,36 @@ button {
         justify-content: space-between;
     }
 
+    /*ajoute un espace dans les images a l'intérieur de jeu défilement*/
+
     .jeu-defilement {
         display: flex;
         justify-content: space-around;
     }
+
+    /*modifie la grosseur des images de jeu défilement par rapport a leur conteneur*/
 
     .jeu-defilement img {
         border: 9px, black, solid;
         object-fit: contain;
     }
 
+    /*modifie la grosseur de la bordure et sa grosseur par rapport a son conteneur*/
+
     .vente_ete {
         border: 9px, black, solid;
         object-fit: contain;
     }
+
+    /*modifie l'emplacement du texte des checkbox dans la page de connexion pour les mettres au centre*/
 
     .checkbox-connexion {
         display: flex;
         align-items: center;
         gap: 8px;
     }
+
+    /*modifie la largeur, l'emplacement,la couleur la grosseur du font et la grosseur de la bordure du conteneur a texte*/
 
     .prompt-texte {
         width: 100%;
@@ -203,11 +242,15 @@ button {
         border: 4px, solid, black;
     }
 
+    /*modifie le conteneur des prompt de la page de connexion*/
+
     .prompt {
         display: flex;
         margin-bottom: 8px;
         height: 60px;
     }
+
+    /*réaffiche le code qr en version mobile*/
 
     .qr-code {
         display:block;
@@ -215,16 +258,20 @@ button {
         background-color: var(--couleur-blanc);
     }
 
-
+    /*ajoute un espace entre les secton de la page de connexion*/
 
     main.connexion {
         display: flex;
         justify-content: space-between;
     }
 
+    /*met les section a une largeur de 48% pour la separer en deux et garder un petit espace*/
+
     .section {
         width: 48%;
     }
+
+    /*modifie l'emplacement, la marge, la font et la couleur du texte de la page de connexion*/
 
     .section p {
         text-align: left;
@@ -232,6 +279,9 @@ button {
         font-family: var(--bank-gothic);
         color: var(--couleur-blanc);
     }
+
+    /*change la couleur du fond, le font, la couleur du texte, la grosseur du texte, l'alignement du texte,
+     change le padding pour le rendre plus petit et la grosseur de la font*/
 
     button {
         background-color: var(--couleur-noir);
@@ -244,14 +294,20 @@ button {
         font-weight: lighter;
     }
 
+    /*change la distance des titres par rapport au reste de la page*/
+
     .titre {
         height: 80px;
         margin-bottom: 10px ;
     }
 
+    /*change la grosseur du texte des checkbox dans la page de connexion*/
+
     .checkbox-connexion p {
         font-size: clamp(0.5rem, 5vw, 1.25rem);
     }
+
+    /*réaffiche le texte relié au code qr en version mobile*/
 
     .texte-petit {
         font-size: clamp(0.5rem, 5vw, 1.25rem);
