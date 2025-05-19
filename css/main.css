@@ -10,7 +10,8 @@
     --bank-gothic: "BankGothic";
 }
 
-/*menu burger*/
+/*creation du style du menu burger, ajoute ses dimensions, detecte le clique,
+ permet de descendre avec la page tout en gardant sa position, le met en avant plan et centre les bar qui le compose */
 .menu-icon {
     width: 30px;
     height: 25px;
@@ -18,18 +19,18 @@
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 2;
+    z-index: 3S;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Cacher la checkbox */
+/* Cache la checkbox */
 #menu-toggle {
     display: none;
 }
 
-/* Bouton burger */
+/* modifie le bouton burger lorsqu'il est cliqué */
 .menu-icon {
     width: 30px;
     height: 25px;
@@ -43,22 +44,26 @@
     cursor: pointer;
 }
 
+/*modifie le X du bouton burger lorsqu'il est cliqué */
+
 .menu-icon span {
     height: 4px;
-    background: #fff;
+    background: var(--couleur-blanc);
     border-radius: 2px;
     transition: 0.3s;
 }
 
-/* Menu latéral */
+/* modification du Menu latéral du menu burger, change sa position pour qu'il soit invisible, change sa hauteur et sa largeur,
+ajoute une transition lors de l'ouverture, empeche que la position négative s'ajoute a la page et dévoile le menu tout le temps
+ et fait en sorte que la bordure soit comprise dans le conteneur */
 aside {
     position: fixed;
     left: -100%;
     top: 0;
     width: 250px;
     height: 100vh;
-    background: #222;
-    color: white;
+    background: var(--couleur-gris);
+    color: var(--couleur-blanc);
     padding: 60px 20px;
     transition: left 0.3s ease;
     z-index: 2;
@@ -84,13 +89,21 @@ aside {
     left: 0;
 }
 
+/*enlève la nav inultile du header en version mobile*/
+
 .haut-page {
     display: none;
 }
 
+/*modifie la grosseur du logo du header*/
+
 .logo-square {
     width: 120px;
+    height: 100%;
+    width: 100%;
 }
+
+/*place le texte du header en colonne et avec un espace entre chaque texte*/
 
 .header-burger ul {
     display: flex;
@@ -99,8 +112,33 @@ aside {
     width: 100%;
 }
 
+/*change la grosseur de texte du header*/
+
 .header-burger li {
     font-size: clamp(1rem, 2.5vw, 2.5rem);
+}
+
+/*force la navigation a prendre toute la largeur*/
+
+header nav {
+    height: 100%;
+}
+
+/*force le ul a prendre toute la largeur de la navigation*/
+
+header ul {
+    width: 100%;
+}
+
+/*modifie l'emplacement, la largeur,la font et la grosseur du texte des texte du header*/
+
+header li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-family: var(--bank-gothic);
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 
 @font-face {
@@ -196,36 +234,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-}
-
-header ul {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-header li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    font-family: var(--bank-gothic);
-    font-size: clamp(1rem, 2vw, 2rem);
-}
-
-.logo-square {
-    height: 100%;
-    width: 100%;
-}
-
-header li:hover {
-    font-size: clamp(0.5rem, 5vw, 2.25rem);
 }
 
 /* Style Aside */
@@ -334,8 +342,12 @@ footer ul {
     width: 100%;
 }
 
+li:hover {
+    font-size: clamp(0.5rem, 5vw, 2.25rem);
+}
+
 .logo-square:hover {
-background-color: var(--couleur-blanc);
+    background-color: var(--couleur-blanc);
 }
 
 @media screen and (min-width: 800px) {
@@ -372,15 +384,22 @@ background-color: var(--couleur-blanc);
         margin: 20px 0;
     }
 
+    .lignes {
+        display: inline-block;
+    }
+
     .images-footer {
         width: 30%;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
     }
 
-    .logo_square_enix_footer {
-        flex-grow: 1;
+    .images-footer img {
+        width: 50%;
+    }
+
+    .images-footer:nth-child(2) {
+        align-self: flex-end;
     }
 
     .menu-burger {
