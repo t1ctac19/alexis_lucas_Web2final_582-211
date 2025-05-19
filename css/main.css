@@ -10,6 +10,99 @@
     --bank-gothic: "BankGothic";
 }
 
+/*menu burger*/
+.menu-icon {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Cacher la checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Bouton burger */
+.menu-icon {
+    width: 30px;
+    height: 25px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Menu latéral */
+aside {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    color: white;
+    padding: 60px 20px;
+    transition: left 0.3s ease;
+    z-index: 2;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Animation du menu burger */
+#menu-toggle:checked+label .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(14px);
+}
+
+#menu-toggle:checked+label .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked+label .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-14px);
+}
+
+/* Affichage du menu */
+#menu-toggle:checked~aside {
+    left: 0;
+}
+
+.haut-page {
+    display: none;
+}
+
+.logo-square {
+    width: 120px;
+}
+
+.header-burger ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-burger li {
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
+}
+
 @font-face {
     font-family: "BankGothic";
     src: url(../assets/polices/bankgothic-md-bt/bankgothic-md-bt/BankGothic\ Bold.ttf) format("truetype");
@@ -20,34 +113,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
 
 /* Styles Généraux */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--bank-gothic);
     color: var(--couleur-blanc);
     text-align: center;
 }
 
 h1 {
-    font-size: clamp(1rem,7.5vw,4rem);
+    font-size: clamp(1rem, 7.5vw, 4rem);
 }
 
 h2 {
-    font-size: clamp(1rem,5vw,3rem);
+    font-size: clamp(1rem, 5vw, 3rem);
 }
 
 h3 {
-    font-size: clamp(0.75rem,5vw,2.5rem);
+    font-size: clamp(0.75rem, 5vw, 2.5rem);
 }
 
 p {
     font-family: var(--poppins);
     color: var(--couleur-blanc);
-    font-size: clamp(0.5rem,5vw,2.25rem);
+    font-size: clamp(0.5rem, 5vw, 2.25rem);
     text-align: center;
 }
 
 li {
     list-style-type: none;
-    font-size: clamp(1rem,2.5vw,2.5rem);
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
     text-align: center;
 }
 
@@ -62,7 +157,7 @@ a {
 input[type="search"] {
     background-color: var(--couleur-gris);
     width: 100%;
-    font-size: clamp(1.25rem,5vw,1.75rem);
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
     color: var(--couleur-blanc);
 }
 
@@ -121,7 +216,7 @@ header li {
     align-items: center;
     width: 20%;
     font-family: var(--bank-gothic);
-    font-size: clamp(1rem,2vw,2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 
 .logo-square {
@@ -157,7 +252,7 @@ aside li {
     align-items: center;
     width: 20%;
     font-family: var(--bank-gothic);
-    font-size: clamp(1rem,2vw,2rem);
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 
 aside a {
@@ -207,7 +302,7 @@ footer ul {
     justify-content: center;
     align-items: center;
     font-family: var(--bank-gothic);
-    font-size: clamp(1rem,1.5vw,1.75rem);
+    font-size: clamp(1rem, 1.5vw, 1.75rem);
     margin: 15px 0;
 }
 
@@ -233,6 +328,14 @@ footer ul {
 
 .images-footer img {
     width: 100%;
+}
+
+li:hover {
+    font-size: clamp(0.5rem, 5vw, 2.25rem);
+}
+
+.logo-square:hover {
+background-color: var(--couleur-blanc);
 }
 
 @media screen and (min-width: 800px) {
@@ -278,5 +381,13 @@ footer ul {
 
     .logo_square_enix_footer {
         flex-grow: 1;
+    }
+
+    .menu-burger {
+        display: none;
+    }
+
+    .haut-page {
+        display: flex;
     }
 }
