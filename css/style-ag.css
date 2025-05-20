@@ -151,7 +151,8 @@ h1, .description {
 }
 
 
-/* Animation de 5 images-clés faisant que l'image fait un mouvement en z et devient à la toute fin disparait */
+/* Animation de 5 images-clés faisant que l'image fait un mouvement en z et devient à la toute fin disparait
+L'animation a été ajoutée pour que  */
 @keyframes eau {
     0% { transform: translate(0vw); }
     25% { transform: translate(75vw);}
