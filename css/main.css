@@ -10,6 +10,15 @@
     --bank-gothic: "BankGothic";
 }
 
+@font-face {
+    font-family: "BankGothic";
+    src: url(../assets/polices/bankgothic-md-bt/bankgothic-md-bt/BankGothic\ Bold.ttf) format("truetype");
+    src: url(../assets/polices/bankgothic-md-bt/BankGothicLightRegular.otf) format("truetype")
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
+
 /*creation du style du menu burger, ajoute ses dimensions, detecte le clique,
  permet de descendre avec la page tout en gardant sa position, le met en avant plan et centre les bar qui le compose */
 .menu-icon {
@@ -141,24 +150,17 @@ header li {
     font-size: clamp(1rem, 2vw, 2rem);
 }
 
-@font-face {
-    font-family: "BankGothic";
-    src: url(../assets/polices/bankgothic-md-bt/bankgothic-md-bt/BankGothic\ Bold.ttf) format("truetype");
-    src: url(../assets/polices/bankgothic-md-bt/BankGothicLightRegular.otf) format("truetype")
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
-
 /* Styles Généraux */
 h1,
 h2,
 h3 {
+    /* Modification du texte dans les balises de titrage */
     font-family: var(--bank-gothic);
     color: var(--couleur-blanc);
     text-align: center;
 }
 
+/* Modification de la taille du texte dans les différents titrages */
 h1 {
     font-size: clamp(1rem, 7.5vw, 4rem);
 }
@@ -172,6 +174,7 @@ h3 {
 }
 
 p {
+    /* Modification du texte dans les balises paragraphes */
     font-family: var(--poppins);
     color: var(--couleur-blanc);
     font-size: clamp(0.5rem, 5vw, 2.25rem);
@@ -179,12 +182,14 @@ p {
 }
 
 li {
+    /* Modification de la taille du textes dans les li et retrait du bullet point */
     list-style-type: none;
     font-size: clamp(1rem, 2.5vw, 2.5rem);
     text-align: center;
 }
 
 a {
+    /* application du flexbox et retrait des propriétés  */
     text-decoration: none;
     color: var(--couleur-blanc);
     display: flex;
@@ -192,6 +197,7 @@ a {
     align-items: center;
 }
 
+/* Modification des barres de recherches */
 input[type="search"] {
     background-color: var(--couleur-gris);
     width: 100%;
@@ -199,22 +205,25 @@ input[type="search"] {
     color: var(--couleur-blanc);
 }
 
+body {
+    margin: 0; /* Le body avait automatiquement une marge, d'où pourquoi il y a une marge de 0 */
+    background-color: #3C3C3C; /* Application de la couleur de fond de la page */
+}
+
 main {
+    /* Arrangement de la largeur et des marges du contenu de la page */
     width: 90%;
     margin: 0 auto;
     padding: 1vw 0;
 }
 
-body {
-    margin: 0;
-    background-color: #3C3C3C;
-}
-
 img {
+    /* S'assure que les images font la largeur qui leur est alloué */
     width: 100%;
 }
 
 ul {
+    /* Retrait du padding d'indentation et configuration du flexbox */
     padding: 0;
     display: flex;
     justify-content: center;
@@ -222,12 +231,16 @@ ul {
 }
 
 .lignes {
-    height: 100%;
     display: none;
+    /* J'ai essayé de faire que les lignes s'affichent correctement, mais je n'ai pas été capable (Les lignes étaient trop grosses et rendait le logo de square enix trop petit)
+    Je l'ai laissé ici pour démontrer que j'ai essayé. */
 }
 
-/* Style Header */
+/*------------------------------------------------------------------------------------
+Style Header
+------------------------------------------------------------------------------------*/
 header {
+    /* Modification de la taille, configuration du flexbox et couleur de fond du header */
     width: 100%;
     background-color: var(--couleur-noir);
     aspect-ratio: 144/20;
@@ -236,7 +249,48 @@ header {
     justify-content: space-between;
 }
 
-/* Style Aside */
+header nav {
+    /* Configuration du flexbox et modification de la hauteur */
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+header ul {
+    /* Configuration du flexbox et modification de la largeur */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header li {
+    /* Configuration du flexbox, de la fonte et de la transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-family: var(--bank-gothic);
+    font-size: clamp(1rem, 2vw, 2rem);
+    transition: transform;
+    transition-duration: 200ms;
+    transform: scale(1);
+}
+
+.logo-square {
+    /* Le logo prend toute la place allouée */
+    height: 100%;
+    width: 100%;
+}
+
+header li:hover {
+    /* Transformation de l'échelle lorsqu'un bouton est hovered par la souris */
+    transform: scale(1.5);
+}
+
+/*------------------------------------------------------------------
+Style Aside
+------------------------------------------------------------------*/
+/* Idem header, mais sur la verticale au lieu de l'horizontale. */
 aside {
     width: 100%;
     background-color: var(--couleur-noir);
@@ -267,16 +321,11 @@ aside li {
     font-size: clamp(1rem, 2vw, 2rem);
 }
 
-aside a {
-    text-decoration: none;
-    color: var(--couleur-blanc);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Style Footer */
+/*------------------------------------------------------------------
+Style Footer
+------------------------------------------------------------------*/
 footer {
+    /* Changement de la largeur, de la couleur de fond et configuration du flexbox */
     width: 100%;
     background-color: var(--couleur-noir);
     display: flex;
@@ -285,6 +334,7 @@ footer {
 }
 
 footer nav {
+    /* configuration du flexbox et changement de la hauteur */
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -292,6 +342,7 @@ footer nav {
 }
 
 footer ul {
+    /* Configuration du flexbox */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -299,10 +350,12 @@ footer ul {
 }
 
 .liens {
+    /* restraint la hauteur de la section .liens lorsqu'en mobile */
     height: 75%;
 }
 
 .reseaux-sociaux {
+    /* Restraint la hauteur de la section .reseaux-sociaux lorsqu'en mobile et configuration du flexbox */
     height: 25%;
     justify-content: center;
     align-items: center;
@@ -310,6 +363,7 @@ footer ul {
 }
 
 .liens li {
+    /* Configuration du flexbox de la fonte et des marges */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -319,6 +373,7 @@ footer ul {
 }
 
 .reseaux-sociaux li {
+    /* Configuration du flexbox, modification des marges et de la largeur */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -327,30 +382,25 @@ footer ul {
 }
 
 .reseaux-sociaux img {
+    /* restriction de la taille des images de réseaux sociaux */
     width: 50%;
     height: 50%;
 }
 
 .images-footer {
+    /* restriction de la largeur et configuration du flexbox */
     width: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.images-footer img {
-    width: 100%;
-}
 
-li:hover {
-    font-size: clamp(0.5rem, 5vw, 2.25rem);
-}
-
-.logo-square:hover {
-    background-color: var(--couleur-blanc);
-}
-
+/*------------------------------------------------------------------
+Section Desktop
+------------------------------------------------------------------*/
 @media screen and (min-width: 800px) {
+    /* Changement du footer de colonnes à rangées */
     footer {
         flex-direction: row;
     }
@@ -384,24 +434,18 @@ li:hover {
         margin: 20px 0;
     }
 
-    .lignes {
-        display: inline-block;
-    }
-
     .images-footer {
         width: 30%;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
-    .images-footer img {
-        width: 50%;
+    .logo_square_enix_footer {
+        flex-grow: 1;
     }
 
-    .images-footer:nth-child(2) {
-        align-self: flex-end;
-    }
-
+    /* Disparition du menu burger, apparition du haut de page */
     .menu-burger {
         display: none;
     }
